@@ -1,4 +1,4 @@
-package com.kostya.letscook;
+package com.kostya.letscook.controller;
 
 
 public class ItemObject {

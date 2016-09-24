@@ -1,4 +1,4 @@
-package com.kostya.letscook;
+package com.kostya.letscook.model;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -13,8 +13,11 @@ import android.view.MenuItem;
 import android.view.View;
 
 
-
-
+import com.kostya.letscook.R;
+import com.kostya.letscook.controller.RecyclerViewAdapter;
+import com.kostya.letscook.controller.ItemClickSupport;
+import com.kostya.letscook.controller.ItemObject;
+import com.kostya.letscook.view.Fragment0;
 
 import java.util.ArrayList;
 import java.util.List;

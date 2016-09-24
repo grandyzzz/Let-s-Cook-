@@ -1,7 +1,9 @@
-package com.kostya.letscook;
+package com.kostya.letscook.controller;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+
+import com.kostya.letscook.R;
 
 public class ItemClickSupport {
     private final RecyclerView mRecyclerView;

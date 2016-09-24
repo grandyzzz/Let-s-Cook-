@@ -1,4 +1,4 @@
-package com.kostya.letscook;
+package com.kostya.letscook.controller;
 
 /**
  * Created by Костя on 27.05.2016.

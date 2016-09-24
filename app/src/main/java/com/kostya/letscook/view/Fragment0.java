@@ -1,4 +1,4 @@
-package com.kostya.letscook;
+package com.kostya.letscook.view;
 
 import android.app.ProgressDialog;
 import android.os.AsyncTask;
@@ -10,6 +10,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
+
+import com.kostya.letscook.controller.ParserItem;
+import com.kostya.letscook.R;
+import com.kostya.letscook.controller.FoodAdapter;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;

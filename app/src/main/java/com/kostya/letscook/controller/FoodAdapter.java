@@ -1,4 +1,4 @@
-package com.kostya.letscook;
+package com.kostya.letscook.controller;
 
 import android.app.Activity;
 import android.content.Context;
@@ -10,6 +10,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.kostya.letscook.R;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;

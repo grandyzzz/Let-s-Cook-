@@ -1,4 +1,4 @@
-package com.kostya.letscook;
+package com.kostya.letscook.view;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -7,6 +7,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+
+import com.kostya.letscook.R;
 
 /**
  * Created by Костя on 29.05.2016.
