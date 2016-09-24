@@ -1,17 +1,20 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:id="@+id/main_continer"
     >
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
+
         android:layout_width="match_parent"
-        android:layout_height="64dp"
+        android:layout_height="60dp"
         android:background="@color/color_primary"
         android:minHeight="?attr/actionBarSize" />
     <FrameLayout
+        android:paddingTop="60dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/fragment">
@@ -31,10 +34,11 @@
             android:layout_height="match_parent"
             android:scrollbars="vertical"
             android:layout_alignParentTop="true"
-            android:layout_alignParentBottom="true" />
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true" />
 
     </RelativeLayout>
     </FrameLayout>
-    </LinearLayout>
+    </FrameLayout>
 
 

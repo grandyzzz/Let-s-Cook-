@@ -5,7 +5,6 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -110,12 +109,12 @@ public class Fragment0 extends Fragment {
 
                     String wURL =arrayList.get(position).getIng();
 
-                     WebFragment.newInstance(wURL);
+                     IngredientsChoiser.newInstance(wURL);
 
 
-                    WebFragment wFragment = new WebFragment();
+                    IngredientsChoiser wFragment = new IngredientsChoiser();
                     FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
-                    ft.add(R.id.fragment,wFragment)
+                    ft.add(R.id.main_continer,wFragment)
                             .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
                             .addToBackStack(null)
                             .commit();
