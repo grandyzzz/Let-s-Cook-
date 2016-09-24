@@ -7,11 +7,14 @@
     >
 
     <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar"
 
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:background="@color/color_primary"
+        android:elevation="4dp"
+        android:paddingTop="@dimen/tool_bar_top_padding"
+        android:transitionName="actionBar"
         android:minHeight="?attr/actionBarSize" />
     <FrameLayout
         android:paddingTop="60dp"
@@ -35,6 +38,7 @@
             android:scrollbars="vertical"
             android:layout_alignParentTop="true"
             android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true" />
 
     </RelativeLayout>
