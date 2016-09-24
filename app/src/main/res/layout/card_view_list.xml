@@ -16,6 +16,7 @@
             android:id="@+id/country_photo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:contentDescription="@string/action_settings"
             android:scaleType="centerCrop" />
 
         <TextView
@@ -23,6 +24,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="13sp"
+            android:text="@string/country_name"
             android:textColor="@color/accent_color"
             android:gravity="center"
             android:layout_below="@+id/country_photo"

@@ -23,7 +23,7 @@
         android:layout_height="match_parent"
         android:paddingLeft="8dp"
         android:paddingRight="8dp"
-        tools:context=".model.MainActivity">
+        tools:context=".MainActivity">
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recycler_view"
