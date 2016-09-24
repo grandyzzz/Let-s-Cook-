@@ -2,6 +2,8 @@ package com.kostya.parser.fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -31,12 +33,9 @@ public class IngredientsChoiser extends Fragment {
     public View onCreateView(LayoutInflater inflater,  ViewGroup container,  Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_choiser,container,false);
 
-        webView = (WebView) v.findViewById(R.id.webView);
-        webView.getSettings().setJavaScriptEnabled(true);
-        webView.getSettings().setSupportZoom(true);
-        webView.getSettings().setBuiltInZoomControls(true);
-        webView.setWebViewClient(new WebViewClient());
-        webView.loadUrl(URL);
+        Toolbar toolbar = (Toolbar) v.findViewById(R.id.collapse_toolbar);
+        ((AppCompatActivity) getActivity()).setSupportActionBar(toolbar);
+
 
 
 
