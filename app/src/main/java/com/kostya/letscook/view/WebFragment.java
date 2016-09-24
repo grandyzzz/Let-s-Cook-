@@ -31,12 +31,7 @@ public class WebFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater,  ViewGroup container,  Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_web,container,false);
 
-        webView = (WebView) v.findViewById(R.id.webView);
-        webView.getSettings().setJavaScriptEnabled(true);
-        webView.getSettings().setSupportZoom(true);
-        webView.getSettings().setBuiltInZoomControls(true);
-        webView.setWebViewClient(new WebViewClient());
-        webView.loadUrl(URL);
+
 
 
         return v;

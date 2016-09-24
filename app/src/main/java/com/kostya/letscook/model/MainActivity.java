@@ -3,6 +3,7 @@ package com.kostya.letscook.model;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -18,12 +19,20 @@ import com.kostya.letscook.controller.RecyclerViewAdapter;
 import com.kostya.letscook.controller.ItemClickSupport;
 import com.kostya.letscook.controller.ItemObject;
 import com.kostya.letscook.view.Fragment0;
+import com.mikepenz.materialdrawer.Drawer;
+
+import com.mikepenz.materialdrawer.model.DividerDrawerItem;
+import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
+import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
+import com.mikepenz.materialdrawer.model.SectionDrawerItem;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.kostya.letscook.R.id.toolbar;
 
-public class MainActivity extends AppCompatActivity {
+
+public class MainActivity extends ActionBarActivity {
 
     private GridLayoutManager lLayout;
     public String URL;
@@ -37,8 +46,25 @@ public class MainActivity extends AppCompatActivity {
         setTitle(null);
 
         Toolbar topToolBar = (Toolbar)findViewById(R.id.toolbar);
-        setSupportActionBar(topToolBar);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         topToolBar.setLogo(R.mipmap.ic_launcher);
+        new Drawer()
+                .withActivity(this)
+                .withToolbar(topToolBar)
+                .withActionBarDrawerToggle(true)
+                .withHeader(R.layout.drawer_header)
+                .addDrawerItems(
+                        new PrimaryDrawerItem().withName(R.string.drawer_item_home).withBadge("99").withIdentifier(1),
+                        new PrimaryDrawerItem().withName(R.string.drawer_item_free_play),
+                        new PrimaryDrawerItem().withName(R.string.drawer_item_custom).withBadge("6").withIdentifier(2),
+                        new SectionDrawerItem().withName(R.string.drawer_item_settings),
+                        new SecondaryDrawerItem().withName(R.string.drawer_item_help),
+                        new SecondaryDrawerItem().withName(R.string.drawer_item_open_source).setEnabled(false),
+                        new DividerDrawerItem(),
+                        new SecondaryDrawerItem().withName(R.string.drawer_item_contact).withBadge("12+").withIdentifier(1)
+                )
+                .build();
 
 
         List<ItemObject> rowListItem = getAllItemList();
@@ -127,6 +153,9 @@ public class MainActivity extends AppCompatActivity {
 
 
                 Log.i("AWA","position "+position);
+
+
+
             }
         });
 
@@ -140,6 +169,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
 
 
 
