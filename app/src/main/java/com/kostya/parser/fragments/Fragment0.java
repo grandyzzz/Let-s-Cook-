@@ -109,10 +109,10 @@ public class Fragment0 extends Fragment {
 
                     String wURL =arrayList.get(position).getIng();
 
-                     IngredientsChoiser.newInstance(wURL);
+                     FoodView.newInstance(wURL);
 
 
-                    IngredientsChoiser wFragment = new IngredientsChoiser();
+                    FoodView wFragment = new FoodView();
                     FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
                     ft.add(R.id.main_continer,wFragment)
                             .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
