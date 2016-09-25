@@ -19,23 +19,11 @@
         android:paddingTop="60dp">
 
 
-    <RelativeLayout
-        android:id="@+id/container"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:paddingLeft="8dp"
-        android:paddingRight="8dp"
-        tools:context=".MainActivity">
 
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/recycler_view"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scrollbars="vertical"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentBottom="true" />
 
-    </RelativeLayout>
+
+
+
     </FrameLayout>
     </FrameLayout>
 

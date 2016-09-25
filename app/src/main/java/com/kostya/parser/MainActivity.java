@@ -18,6 +18,7 @@ import android.widget.Toast;
 
 import com.kostya.parser.adapters.RecyclerViewAdapter;
 import com.kostya.parser.fragments.Fragment0;
+import com.kostya.parser.fragments.FragmentMain;
 
 
 import java.util.ArrayList;
@@ -26,8 +27,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    private GridLayoutManager lLayout;
-    public String URL;
+
 
 
 
@@ -44,106 +44,11 @@ public class MainActivity extends AppCompatActivity {
        topToolBar.setLogo(R.mipmap.ic_launcher);
         topToolBar.setTitleTextColor(Color.WHITE);
 
-
-
-        List<ItemObject> rowListItem = getAllItemList();
-
-        lLayout = new GridLayoutManager(MainActivity.this, 3);
-
-        RecyclerView rView = (RecyclerView)findViewById(R.id.recycler_view);
-        rView.setHasFixedSize(true);
-        rView.setLayoutManager(lLayout);
-
-        RecyclerViewAdapter rcAdapter = new RecyclerViewAdapter(MainActivity.this, rowListItem);
-        rView.setAdapter(rcAdapter);
-
-        ItemClickSupport.addTo(rView).setOnItemClickListener(new ItemClickSupport.OnItemClickListener() {
-            @Override
-            public void onItemClicked(RecyclerView recyclerView, int position, View v) {
-                switch (position){
-                    case 0:
-                    {
-                        URL = "http://eda.ru/recepty/vypechka-deserty";
-                    }
-                    break;
-                    case 1:
-                    {
-                        URL = "http://eda.ru/recepty/osnovnye-blyuda";
-                    }
-                    break;
-                    case 2:
-                    {
-                        URL = "http://eda.ru/recepty/zavtraki";
-                    }
-                    break;
-                    case 3:
-                    {
-                        URL = "http://eda.ru/recepty/salaty";
-                    }
-                    break;
-                    case 4:
-                    {
-                        URL = "http://eda.ru/recepty/supy";
-                    }
-                    break;
-                    case 5:
-                    {
-                        URL = "http://eda.ru/recepty/pasta-picca";
-                    }
-                    break;
-                    case 6:
-                    {
-                        URL = "http://eda.ru/recepty/zakuski";
-                    }
-                    break;
-                    case 7:
-                    {
-                        URL = "http://eda.ru/recepty/sendvichi";
-                    }
-                    break;
-                    case 8:
-                    {
-                        URL = "http://eda.ru/recepty/rizotto";
-                    }
-                    break;
-                    case 9:
-                    {
-                        URL = "http://eda.ru/recepty/napitki";
-                    }
-                    break;
-                    case 10:
-                    {
-                        URL = "http://eda.ru/recepty/sousy-marinady";
-                    }
-                    break;
-                    case 11:
-                    {
-                        URL = "http://eda.ru/recepty/bulony";
-                    }
-                    break;
-                }
-                Fragment0 fragment = Fragment0.newInstance(URL);
-                Fragment fragment0 = new Fragment0();
-                FragmentTransaction tr=getSupportFragmentManager().beginTransaction();
-
-                tr.add(R.id.fragment,fragment0)
-                        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
-                        .addToBackStack(null)
-                        .commit();
-
-
-                Log.i("AWA","position "+position);
-            }
-        });
-
-
-
-
-
-
-
-
-
+        Fragment fragment = new FragmentMain();
+        FragmentTransaction tr=getSupportFragmentManager().beginTransaction();
+        tr.replace(R.id.fragment,fragment)
+                .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+                .commit();
 
     }
 
@@ -171,23 +76,7 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-    private List<ItemObject> getAllItemList(){
 
-        List<ItemObject> allItems = new ArrayList<ItemObject>();
-        allItems.add(new ItemObject("Выпечка и десерты",R.drawable.vypechka_deserty));
-        allItems.add(new ItemObject("Основные блюда",R.drawable.osnovnye_blyuda));
-        allItems.add(new ItemObject("Завтраки",R.drawable.zavtraki));
-        allItems.add(new ItemObject("Салаты",R.drawable.salaty));
-        allItems.add(new ItemObject("Супы",R.drawable.supy));
-        allItems.add(new ItemObject("Паста и пицца",R.drawable.pasta_picca));
-        allItems.add(new ItemObject("Закуски",R.drawable.zakuski));
-        allItems.add(new ItemObject("Сэндвичи",R.drawable.sendvichi));
-        allItems.add(new ItemObject("Ризотто",R.drawable.rizotto));
-        allItems.add(new ItemObject("Напитки",R.drawable.napitki));
-        allItems.add(new ItemObject("Соусы и маринады",R.drawable.sousy_marinady));
-        allItems.add(new ItemObject("Бульоны",R.drawable.bulony));
-        return allItems;
-    }
 
 
 
