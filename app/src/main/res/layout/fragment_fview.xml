@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     android:background="@color/accent_color"
+    android:paddingTop="20dp"
     >
 
     <android.support.design.widget.AppBarLayout
@@ -25,7 +26,8 @@
             <ImageView
                 android:id="@+id/collapse_img"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"/>
 
             <android.support.v7.widget.Toolbar
                 android:id="@+id/collapse_toolbar"
