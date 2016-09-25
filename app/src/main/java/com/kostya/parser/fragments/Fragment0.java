@@ -108,13 +108,14 @@ public class Fragment0 extends Fragment {
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
                     String wURL =arrayList.get(position).getIng();
+                    String imgURL=arrayList.get(position).getImg();
 
-                     FoodView.newInstance(wURL);
+                     FoodView.newInstance(wURL,imgURL);
 
 
                     FoodView wFragment = new FoodView();
                     FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
-                    ft.add(R.id.main_continer,wFragment)
+                    ft.add(R.id.main_container,wFragment)
                             .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
                             .addToBackStack(null)
                             .commit();

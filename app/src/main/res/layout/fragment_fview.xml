@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     android:background="@color/accent_color"
-   >
+    >
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/app_bar"
@@ -22,6 +22,10 @@
             android:fitsSystemWindows="true"
             app:contentScrim="?attr/colorPrimary"
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
+            <ImageView
+                android:id="@+id/collapse_img"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
 
             <android.support.v7.widget.Toolbar
                 android:id="@+id/collapse_toolbar"

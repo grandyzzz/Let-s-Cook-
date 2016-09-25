@@ -3,24 +3,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:id="@+id/main_continer"
+    android:id="@+id/main_container"
     >
 
     <android.support.v7.widget.Toolbar
-
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:background="@color/color_primary"
-        android:elevation="4dp"
-        android:paddingTop="@dimen/tool_bar_top_padding"
-        android:transitionName="actionBar"
         android:minHeight="?attr/actionBarSize" />
     <FrameLayout
-        android:paddingTop="60dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/fragment">
+        android:id="@+id/fragment"
+        android:paddingTop="60dp">
 
 
     <RelativeLayout
@@ -37,9 +33,7 @@
             android:layout_height="match_parent"
             android:scrollbars="vertical"
             android:layout_alignParentTop="true"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+            android:layout_alignParentBottom="true" />
 
     </RelativeLayout>
     </FrameLayout>
